@@ -152,11 +152,11 @@
                 <a href="images/my-cv.pdf" download class="btn btn2">Download Cv</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form onsubmit="sendEmail(); reset(); return false;">
                     <input type="text" name="Name" placeholder="Your Name" required="">
-                    <input type="email" name="email" id="Your email" required="">
+                    <input type="email" id="email" name="email" placeholder="Your email" required="">
                     <textarea name="Message"  rows="6" placeholder="Your message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+                    <button type="submit" class="btn btn2">Send</button>
                 </form>
             </div>
         </div>
@@ -193,6 +193,26 @@
     }
     function closemenu(){
         sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+<script src= "https://smtpjs.com/v3/smtp.js"></script>
+<script>
+
+    function sendEmail(){
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "martehn019@g.pslib.cz",
+            Password : "12B338583581B6D011B22EFDA3ED7C0E886C",
+            To : document.getElementById("email").value,
+            From : "martehn019@g.pslib.cz",
+            Subject : "This is the subject",
+            Body : "And this is the body"
+
+        }).then(
+            message => alert(message)
+        );
     }
 
 </script>

@@ -16,11 +16,11 @@
         <nav>
             <img src="images/Bez názvu-1.png" class="logo">
             <ul id="sidemenu">
-                <li><a href="#header">Domů</a></li>
-                <li><a href="#about">O mně</a></li>
-                <li><a href="#services">Služby</a></li>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
             <i class="fas fa-bars" onclick="openmenu()"></i>
@@ -40,18 +40,18 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">O mně</h1>
-                <p>Jmenuju se Martin Těhník a právě studuji na VŠ v Liberci, obor mechatronika. Zároveň pracuji jako Software developer na juniorní pozici ve firmě Jablotron Controls.
-                   Mezi mé přednosti patří teamleading, týmová práce, samostatnost a jsem otevřený novým věcem.</p>
+                <p>My name is Martin Těhník and I am currently studying at the University of Liberec, majoring in mechatronics. At the same time, I work as a Software developer in a junior position at Jablotron Controls.
+                My strengths include team leading, teamwork, independence and I am open to new things.</p>
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Dovednosti</p>
-                    <p class="tab-links"onclick="opentab('experience')">Zkušenosti</p>
-                    <p class="tab-links"onclick="opentab('education')">Vzdělání</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
-                        <li><span>Programování</span><br>Jazyky: C, Python, C#, Html, CSS </li>
-                        <li><span>IoT</span><br>Návrh a design IoT sítě</li>
-                        <li><span>Komunikace</span><br>Problem solving, komunikace s netechnickými lidmi</li>
+                        <li><span>Programming</span><br>Languages: C, Python, C#, Html, CSS </li>
+                        <li><span>IoT</span><br>Design of IoT network</li>
+                        <li><span>Communication</span><br>Problem solving, communication with non-technology people</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="experience">
@@ -61,8 +61,8 @@
                 </div>
                 <div class="tab-contents" id="education">
                     <ul>
-                        <li><span>2023 - present</span><br>TUL Liberec, obor: mechatronika</li>
-                        <li><span>2019-2023</span><br>SPŠSE A VOŠ Liberec, obor: automatizace a řídící systémy</li>
+                        <li><span>2023 - present</span><br>TUL Liberec, field: mechatronics</li>
+                        <li><span>2019-2023</span><br>SPŠSE A VOŠ Liberec, field: automation a controlling systémy</li>
                     </ul>
                 </div>
             </div>
@@ -80,17 +80,17 @@
         <div class="services-list">
             <div>
                 <h2>Backend</h2>
-                <p>Backendové scripty pro analýzu a uchování dat, masivní využítí v IoT.</p>
+                <p>Backendové scripts for analyzing and storing data, massive usage in IoT.</p>
                 <a href="#">learn more</a>
             </div>
             <div>
-                <h2>Konzolové aplikace</h2>
-                <p>Aplikace určené pro sběr různých dat a následná další práce s nimi.</p>
+                <h2>Console apps</h2>
+                <p>Aplications made for collecting the data and another work with them.</p>
                 <a href="#">learn more</a>
             </div>
             <div>
                 <h2>Web design</h2>
-                <p>Design webové stránky použitím HTML a CSS, nebo pomocí pythonu a frameworku dash.</p>
+                <p>Design of web page using HTML and CSS, or using Python Dash framework.</p>
                 <a href="#">learn more</a>
             </div>
         </div>
@@ -101,29 +101,29 @@
 
 <div id="portfolio">
     <div class="container">
-        <h1 class="sub-title">Moje práce</h1>
+        <h1 class="sub-title">My projects</h1>
         <div class="work-list">
             <div class="work">
                 <img src="images/20231112_121539124_iOS.jpg">
                 <div class="layer">
-                    <h3>IoT aplikace pro měření atmosferických dat</h3>
-                    <p>Jedná se o propojení dvou M5stack modulů, kde jeden modul slouží ke sběru dat a druhý jako ovladač a zobrazovač dat. M5stack sloužící k ovládání je schopen dále bezdrátově ovládat světýlka.</p>
+                    <h3>IoT application for measuring atmospheric data</h3>
+                    <p>It is a connection of two M5stack modules, where one module is used for data collection and the other as a controller and data display. The M5stack used for control is also able to control the lights wirelessly.</p>
                     <a href="https://github.com/Martinos21/Maturitni-prace">Klikni</a>
                 </div>
             </div>
             <div class="work">
                 <img src="images/20231112_121427773_iOS.jpg">
                 <div class="layer">
-                    <h3>Webová aplikace pro sběr online dat</h3>
-                    <p>Webová stránka pro monitoring Raspberry Pi a dalších onlines services dělaná pro firmu Jablotron Controls.</p>
+                    <h3>Web application for online data collection</h3>
+                    <p>Website for Raspberry Pi monitoring and other online services made for Jablotron Controls.</p>
                     <a href="#">Klikni</a>
                 </div>
             </div>
             <div class="work">
                 <img src="images/20231112_122639266_iOS.jpg">
                 <div class="layer">
-                    <h3>WinForms aplikace na vizualizaci dat posílaných po MODBUS</h3>
-                    <p>Aplikace pro windows počítač, která na základě COM portu je schopna vyčítat data z jednotky od firmy Wavin.</p>
+                    <h3>WinForms application for visualization of data sent via MODBUS</h3>
+                    <p>An application for a Windows computer that, based on the COM port, is able to read data from the Wavin unit.</p>
                     <a href="https://github.com/Martinos21/C-app-simple-data">Klikni</a>
                 </div>
             </div>
@@ -146,14 +146,14 @@
                     <a href=""><i class="fa-brands fa-square-twitter"></i></a>
                     <a href="https://github.com/Martinos21"><i class="fa-brands fa-github"></i>
                 </div>
-                <a href="images/my-cv.pdf" download class="btn btn2">Stáhni si Cv</a>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
                 <form action="https://formsubmit.co/m4rtin.tehnik@gmail.com" method="POST">
                     <input type="text" name="Name" placeholder="Your Name" required="">
                     <input type="email" id="email" name="email" placeholder="Your email" required="">
                     <textarea name="Message"  rows="6" placeholder="Your message"></textarea>
-                    <button type="submit" class="btn btn2">Poslat</button>
+                    <button type="submit" class="btn btn2">Send</button>
                 </form>
             </div>
         </div>

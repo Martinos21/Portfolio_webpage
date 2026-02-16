@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="icon" href="images/OIG.jfif">
+    <script src="https://kit.fontawesome.com/860a5eb406.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header id="header">
+    <div class="container">
+        <nav aria-label="Main navigation">
+            <img src="images/Bez názvu-1.png" class="logo" alt="Logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <i class="fas fa-times" onclick="closemenu()" aria-hidden="true"></i>
+                </li>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()" aria-hidden="true"></i>
+        </nav>
+
+        <div class="header-text">
+            <p>Junior software developer</p>
+            <h1><span>Martin</span><br>Těhník</h1>
+        </div>
+    </div>
+</header>
+
+<main>
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/IMG_2941-small.jpg"
+                     srcset="images/IMG_2941-small.jpg 480w,
+                             images/IMG_2941-medium.jpg 800w,
+                             images/IMG_2941.JPG 1200w"
+                     sizes="(max-width: 600px) 90vw, 400px"
+                     alt="Profile photo">
+            </div>
+
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p>
+                    My name is Martin Těhník and I am currently studying at the University of Liberec, majoring in mechatronics.
+                    At the same time, I work as a Software developer in a junior position at Jablotron Controls.
+                    My strengths include team leading, teamwork, independence and I am open to new things.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab(event,'skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab(event,'experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab(event,'education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming</span><br>Languages: C, Python, C#, HTML, CSS</li>
+                        <li><span>IoT</span><br>Design of IoT network</li>
+                        <li><span>Communication</span><br>Problem solving, communication with non-technology people</li>
+                        <!-- Přidaný nečíslovaný seznam pro 7 položek -->
+                        <li><span>Project Management</span>
+                            <ul>
+                                <li>Planning</li>
+                                <li>Team coordination</li>
+                            </ul>
+                        </li>
+                        <li>Automation</li>
+                        <li>Debugging</li>
+                        <li>Documentation</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2020 - Current</span><br>Part time Junior Software dev in Jablotron Controls</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023 - present</span><br>TUL Liberec, field: mechatronics</li>
+                        <li><span>2019-2023</span><br>SPŠSE A VOŠ Liberec, field: automation a controlling systémy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+
+        <div class="services-list">
+            <article>
+                <h2>Backend</h2>
+                <p>Backend scripts for analyzing and storing data, massive usage in IoT.</p>
+                <a href="#">learn more</a>
+            </article>
+
+            <article>
+                <h2>Console apps</h2>
+                <p>Aplications made for collecting the data and another work with them.</p>
+                <a href="#">learn more</a>
+            </article>
+
+            <article>
+                <h2>Web design</h2>
+                <p>Design of web page using HTML and CSS, or using Python Dash framework.</p>
+                <a href="#">learn more</a>
+            </article>
+        </div>
+
+        <!-- Tabulka jako povinný prvek -->
+        <table>
+            <caption>Service technologies</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2">Service</th>
+                    <th colspan="2">Technology</th>
+                </tr>
+                <tr>
+                    <th>Main</th>
+                    <th>Secondary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Backend</td>
+                    <td>Python</td>
+                    <td>C#</td>
+                </tr>
+                <tr>
+                    <td>Console Apps</td>
+                    <td>C#, Python</td>
+                    <td>SQL</td>
+                </tr>
+                <tr>
+                    <td>Web Design</td>
+                    <td>HTML/CSS</td>
+                    <td>Dash</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My projects</h1>
+
+        <div class="work-list">
+            <article class="work">
+                <img src="images/20231112_121539124_iOS.jpg" alt="Accuweather app">
+                <div class="layer">
+                    <h3>Accuweather mobile app</h3>
+                    <p>This is an app targeting mobile devices with iOS and Android 14. Built with .NET Maui and Accuweather API.</p>
+                    <a href="https://github.com/Martinos21/Accuweather_app">Show</a>
+                </div>
+            </article>
+
+            <article class="work">
+                <img src="images/20231112_121427773_iOS.jpg" alt="Web monitoring app">
+                <div class="layer">
+                    <h3>Web application for online data collection</h3>
+                    <p>Website for Raspberry Pi monitoring and other online services made for Jablotron Controls.</p>
+                    <a href="#">Show</a>
+                </div>
+            </article>
+
+            <article class="work">
+                <img src="images/20231112_122639266_iOS.jpg" alt="WinForms app">
+                <div class="layer">
+                    <h3>WinForms application for visualization of data sent via MODBUS</h3>
+                    <p>An application for a Windows computer that, based on the COM port, is able to read data from the Wavin unit.</p>
+                    <a href="https://github.com/Martinos21/C-app-simple-data">Show</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="see-more-wrapper">
+            <a href="https://github.com/Martinos21" class="btn">See more</a>
+        </div>        
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                <p><i class="fas fa-paper-plane"></i> m4rtin.tehnik@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> +777 053 377</p>
+
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/martin-t%C4%9Bhnik-63454322a/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://github.com/Martinos21"><i class="fa-brands fa-github"></i></a>
+                </div>
+
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+
+            <div class="contact-right">
+                <!-- Formulář s fieldset, legend a label -->
+                <form action="https://formsubmit.co/m4rtin.tehnik@gmail.com" method="POST">
+                    <fieldset>
+                        <legend>Contact Form</legend>
+
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="Name" placeholder="Your Name" required>
+
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email" required>
+
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="Message" rows="6" placeholder="Your message"></textarea>
+
+                        <button type="submit" class="btn">Send</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <!-- Inline SVG -->
+    <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" fill="#ff004f"/>
+    </svg>
+
+    <p>© 2026 Martin Těhník</p>
+
+    <p>
+        <a href="https://validator.w3.org/">HTML validace</a> |
+        <a href="https://jigsaw.w3.org/css-validator/">CSS validace</a> |
+        <a href="https://wave.webaim.org/">WCAG audit</a>
+    </p>
+</footer>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(event, tabname){
+        for (let tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (let tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){ sidemenu.style.right = "0"; }
+    function closemenu(){ sidemenu.style.right = "-200px"; }
+</script>
+
+</body>
+</html>

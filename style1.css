@@ -432,6 +432,7 @@
       height: 100vh;
       padding-top: 60px;
       transition: right .4s;
+      z-index: 100;
     }
   
     nav ul li {

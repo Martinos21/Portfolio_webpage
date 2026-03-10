@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
+    <title>Martin Těhník | Portfolio</title>
     <link rel="stylesheet" href="style1.css">
     <link rel="icon" href="images/OIG.jfif">
     <script src="https://kit.fontawesome.com/860a5eb406.js" crossorigin="anonymous"></script>
@@ -24,7 +24,7 @@
                     <i class="fas fa-times" onclick="closemenu()" aria-hidden="true"></i>
                 </li>
             </ul>
-            <i class="fas fa-bars" onclick="openmenu()" aria-hidden="true"></i>
+            <i class="fas fa-bars" onclick="openmenu()" aria-hidden="true" role="button" aria-label="Open menu"></i>
         </nav>
 
         <div class="header-text">
@@ -35,218 +35,273 @@
 </header>
 
 <main>
-<section id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/IMG_2941-small.jpg"
-                     srcset="images/IMG_2941-small.jpg 480w,
-                             images/IMG_2941-medium.jpg 800w,
-                             images/IMG_2941.JPG 1200w"
-                     sizes="(max-width: 600px) 90vw, 400px"
-                     alt="Profile photo">
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <picture>
+                        <source srcset="images/IMG_2941-small.jpg" media="(max-width: 600px)">
+                        <img src="images/IMG_2941.JPG" 
+                             srcset="images/IMG_2941-small.jpg 480w, images/IMG_2941-medium.jpg 800w, images/IMG_2941.JPG 1200w"
+                             sizes="(max-width: 600px) 90vw, 400px" 
+                             alt="Portrait of Martin Těhník">
+                    </picture>
+                </div>
+
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>
+                        My name is Martin Těhník and I am currently studying at the University of Liberec, majoring in mechatronics. 
+                        I work as a Junior Software Developer at Jablotron Controls. You can explore my 
+                        <a href="#services">specialized services</a> or <a href="#contact">get in touch</a> for collaboration.
+                    </p>
+
+                    <div class="tab-titles" role="tablist">
+                        <button class="tab-links active-link" onclick="opentab(event,'skills')" role="tab">Technical Skills</button>
+                        <button class="tab-links" onclick="opentab(event,'workflow')" role="tab">My Workflow</button>
+                        <button class="tab-links" onclick="opentab(event,'education')" role="tab">Education</button>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills" role="tabpanel">
+                        <ul>
+                            <li><span>Programming Languages</span>
+                                <ul>
+                                    <li>Python (Data analysis & Scripting)</li>
+                                    <li>C# (.NET Maui & WinForms)</li>
+                                </ul>
+                            </li>
+                            <li><span>Web Technologies</span>
+                                <ul>
+                                    <li>HTML5 & Semantic Markup</li>
+                                    <li>CSS3 (Flexbox, Grid, Animations)</li>
+                                </ul>
+                            </li>
+                            <li><span>IoT Network Design</span>
+                                <ul>
+                                    <li>MQTT & Modbus Protocols</li>
+                                    <li>Network Topology Planning</li>
+                                </ul>
+                            </li>
+                            <li><span>Embedded Systems</span>
+                                <ul>
+                                    <li>C/C++ for Microcontrollers</li>
+                                    <li>Raspberry Pi & Arduino Integration</li>
+                                </ul>
+                            </li>
+                            <li><span>Database Management</span>
+                                <ul>
+                                    <li>Relational (MS SQL, MySQL)</li>
+                                    <li>Time-series (InfluxDB)</li>
+                                </ul>
+                            </li>
+                            <li><span>UI/UX Design</span>
+                                <ul>
+                                    <li>Wireframing & Prototyping</li>
+                                    <li>Responsive & Accessible Design</li>
+                                </ul>
+                            </li>
+                            <li><span>Version Control</span>
+                                <ul>
+                                    <li>Git (GitHub / GitLab)</li>
+                                    <li>CI/CD Basic Workflows</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="workflow" role="tabpanel">
+                        <ol>
+                            <li><span>Consultation</span>
+                                <ul>
+                                    <li>Initial client meeting</li>
+                                    <li>Feasibility study & budget</li>
+                                </ul>
+                            </li>
+                            <li><span>Architecture Design</span>
+                                <ul>
+                                    <li>System schema creation</li>
+                                    <li>Technology stack selection</li>
+                                </ul>
+                            </li>
+                            <li><span>Prototyping</span>
+                                <ul>
+                                    <li>UI Mockups in Figma</li>
+                                    <li>Proof of concept (PoC) code</li>
+                                </ul>
+                            </li>
+                            <li><span>Development Phase</span>
+                                <ul>
+                                    <li>Core backend implementation</li>
+                                    <li>Frontend integration</li>
+                                </ul>
+                            </li>
+                            <li><span>Testing & QA</span>
+                                <ul>
+                                    <li>Unit & Integration testing</li>
+                                    <li>Accessibility (WCAG) audit</li>
+                                </ul>
+                            </li>
+                            <li><span>Documentation</span>
+                                <ul>
+                                    <li>Technical manual writing</li>
+                                    <li>API endpoint documentation</li>
+                                </ul>
+                            </li>
+                            <li><span>Final Deployment</span>
+                                <ul>
+                                    <li>Production server setup</li>
+                                    <li>Post-launch monitoring</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="tab-contents" id="education" role="tabpanel">
+                        <ul>
+                            <li><span>2023 - Present</span><br>TUL Liberec - Mechatronics</li>
+                            <li><span>2019 - 2023</span><br>SPŠSE Liberec - Automation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <article>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Backend</h2>
+                    <p>Robust scripts for IoT data processing and storage solutions.</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-terminal"></i>
+                    <h2>Console Apps</h2>
+                    <p>Efficient CLI tools for automated data collection and monitoring.</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Web Design</h2>
+                    <p>Clean, accessible frontends built with modern standards.</p>
+                </article>
             </div>
 
-            <div class="about-col-2">
-                <h1 class="sub-title">About me</h1>
-                <p>
-                    My name is Martin Těhník and I am currently studying at the University of Liberec, majoring in mechatronics.
-                    At the same time, I work as a Software developer in a junior position at Jablotron Controls.
-                    My strengths include team leading, teamwork, independence and I am open to new things.
-                </p>
+            <table>
+                <caption>Technical Service Overview</caption>
+                <thead>
+                    <tr>
+                        <th rowspan="2" scope="col">Service Category</th>
+                        <th colspan="2" scope="colgroup">Technology Stack</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Primary</th>
+                        <th scope="col">Secondary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Backend</th>
+                        <td>Python / C#</td>
+                        <td>SQL / InfluxDB</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Desktop/Mobile</th>
+                        <td>.NET Maui</td>
+                        <td>WinForms</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Web</th>
+                        <td>HTML5 / CSS3</td>
+                        <td>JS / Dash</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab(event,'skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab(event,'experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab(event,'education')">Education</p>
+    <section id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <article class="work">
+                    <img src="images/20231112_121539124_iOS.jpg" alt="Preview of Accuweather app">
+                    <div class="layer">
+                        <h3>Accuweather App</h3>
+                        <p>Mobile weather tracking using .NET Maui.</p>
+                        <a href="https://github.com/Martinos21/Accuweather_app" aria-label="View Accuweather project on GitHub"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </article>
+                <article class="work">
+                    <img src="images/20231112_121427773_iOS.jpg" alt="Preview of Web monitoring app">
+                    <div class="layer">
+                        <h3>IoT Monitor</h3>
+                        <p>Raspberry Pi online data collection dashboard.</p>
+                        <a href="#" aria-label="View IoT Monitor project"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </article>
+                <article class="work">
+                    <img src="images/20231112_122639266_iOS.jpg" alt="Preview of WinForms app">
+                    <div class="layer">
+                        <h3>Modbus Viewer</h3>
+                        <p>Windows desktop app for unit visualization.</p>
+                        <a href="https://github.com/Martinos21/C-app-simple-data" aria-label="View Modbus project on GitHub"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </article>
+            </div>
+            <div class="see-more-wrapper">
+                <a href="https://github.com/Martinos21" class="btn">See more on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p><i class="fas fa-paper-plane"></i> m4rtin.tehnik@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> +420 777 053 377</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
                 </div>
+                <div class="contact-right">
+                    <form action="#" method="POST">
+                        <fieldset>
+                            <legend>Send a Message</legend>
+                            
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required autocomplete="name">
 
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Programming</span><br>Languages: C, Python, C#, HTML, CSS</li>
-                        <li><span>IoT</span><br>Design of IoT network</li>
-                        <li><span>Communication</span><br>Problem solving, communication with non-technology people</li>
-                        <!-- Přidaný nečíslovaný seznam pro 7 položek -->
-                        <li><span>Project Management</span>
-                            <ul>
-                                <li>Planning</li>
-                                <li>Team coordination</li>
-                            </ul>
-                        </li>
-                        <li>Automation</li>
-                        <li>Debugging</li>
-                        <li>Documentation</li>
-                    </ul>
-                </div>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email">
 
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>2020 - Current</span><br>Part time Junior Software dev in Jablotron Controls</li>
-                    </ul>
-                </div>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="How can I help you?" required></textarea>
 
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2023 - present</span><br>TUL Liberec, field: mechatronics</li>
-                        <li><span>2019-2023</span><br>SPŠSE A VOŠ Liberec, field: automation a controlling systémy</li>
-                    </ul>
+                            <button type="submit" class="btn">Submit</button>
+                        </fieldset>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<section id="services">
-    <div class="container">
-        <h1 class="sub-title">My Services</h1>
-
-        <div class="services-list">
-            <article>
-                <h2>Backend</h2>
-                <p>Backend scripts for analyzing and storing data, massive usage in IoT.</p>
-                <a href="#">learn more</a>
-            </article>
-
-            <article>
-                <h2>Console apps</h2>
-                <p>Aplications made for collecting the data and another work with them.</p>
-                <a href="#">learn more</a>
-            </article>
-
-            <article>
-                <h2>Web design</h2>
-                <p>Design of web page using HTML and CSS, or using Python Dash framework.</p>
-                <a href="#">learn more</a>
-            </article>
-        </div>
-
-        <!-- Tabulka jako povinný prvek -->
-        <table>
-            <caption>Service technologies</caption>
-            <thead>
-                <tr>
-                    <th rowspan="2">Service</th>
-                    <th colspan="2">Technology</th>
-                </tr>
-                <tr>
-                    <th>Main</th>
-                    <th>Secondary</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Backend</td>
-                    <td>Python</td>
-                    <td>C#</td>
-                </tr>
-                <tr>
-                    <td>Console Apps</td>
-                    <td>C#, Python</td>
-                    <td>SQL</td>
-                </tr>
-                <tr>
-                    <td>Web Design</td>
-                    <td>HTML/CSS</td>
-                    <td>Dash</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</section>
-
-<section id="portfolio">
-    <div class="container">
-        <h1 class="sub-title">My projects</h1>
-
-        <div class="work-list">
-            <article class="work">
-                <img src="images/20231112_121539124_iOS.jpg" alt="Accuweather app">
-                <div class="layer">
-                    <h3>Accuweather mobile app</h3>
-                    <p>This is an app targeting mobile devices with iOS and Android 14. Built with .NET Maui and Accuweather API.</p>
-                    <a href="https://github.com/Martinos21/Accuweather_app">Show</a>
-                </div>
-            </article>
-
-            <article class="work">
-                <img src="images/20231112_121427773_iOS.jpg" alt="Web monitoring app">
-                <div class="layer">
-                    <h3>Web application for online data collection</h3>
-                    <p>Website for Raspberry Pi monitoring and other online services made for Jablotron Controls.</p>
-                    <a href="#">Show</a>
-                </div>
-            </article>
-
-            <article class="work">
-                <img src="images/20231112_122639266_iOS.jpg" alt="WinForms app">
-                <div class="layer">
-                    <h3>WinForms application for visualization of data sent via MODBUS</h3>
-                    <p>An application for a Windows computer that, based on the COM port, is able to read data from the Wavin unit.</p>
-                    <a href="https://github.com/Martinos21/C-app-simple-data">Show</a>
-                </div>
-            </article>
-        </div>
-
-        <div class="see-more-wrapper">
-            <a href="https://github.com/Martinos21" class="btn">See more</a>
-        </div>        
-    </div>
-</section>
-
-<section id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact me</h1>
-                <p><i class="fas fa-paper-plane"></i> m4rtin.tehnik@gmail.com</p>
-                <p><i class="fas fa-phone-square-alt"></i> +777 053 377</p>
-
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/martin-t%C4%9Bhnik-63454322a/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
-                    <a href="https://github.com/Martinos21"><i class="fa-brands fa-github"></i></a>
-                </div>
-
-                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
-            </div>
-
-            <div class="contact-right">
-                <!-- Formulář s fieldset, legend a label -->
-                <form action="https://formsubmit.co/m4rtin.tehnik@gmail.com" method="POST">
-                    <fieldset>
-                        <legend>Contact Form</legend>
-
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="Name" placeholder="Your Name" required>
-
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your email" required>
-
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="Message" rows="6" placeholder="Your message"></textarea>
-
-                        <button type="submit" class="btn">Send</button>
-                    </fieldset>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 </main>
 
 <footer>
-    <!-- Inline SVG -->
-    <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="10" fill="#ff004f"/>
+    <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true" style="margin-bottom: 10px;">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#ff004f" stroke-width="2"/>
     </svg>
-
-    <p>© 2026 Martin Těhník</p>
-
-    <p>
-        <a href="https://validator.w3.org/">HTML validace</a> |
-        <a href="https://jigsaw.w3.org/css-validator/">CSS validace</a> |
-        <a href="https://wave.webaim.org/">WCAG audit</a>
-    </p>
+    <p>© 2026 Martin Těhník | Built for TUL SP</p>
+    <div class="validators">
+        <a href="https://validator.w3.org/nu/?doc=https://stuwrk.nti.tul.cz/~YOUR_URL/sp/">HTML Validation</a> |
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://stuwrk.nti.tul.cz/~YOUR_URL/sp/style1.css">CSS Validation</a> |
+        <a href="https://wave.webaim.org/report#/https://stuwrk.nti.tul.cz/~YOUR_URL/sp/">WCAG Audit</a>
+    </div>
 </footer>
 
 <script>
@@ -254,21 +309,15 @@
     var tabcontents = document.getElementsByClassName("tab-contents");
 
     function opentab(event, tabname){
-        for (let tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-        for (let tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
+        for(tablink of tablinks){ tablink.classList.remove("active-link"); }
+        for(tabcontent of tabcontents){ tabcontent.classList.remove("active-tab"); }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
 
     var sidemenu = document.getElementById("sidemenu");
-
     function openmenu(){ sidemenu.style.right = "0"; }
     function closemenu(){ sidemenu.style.right = "-220px"; }
 </script>
-
 </body>
 </html>

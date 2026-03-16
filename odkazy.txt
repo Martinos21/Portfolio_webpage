@@ -1,0 +1,29 @@
+SEZNAM SPLNĚNÝCH BONUSŮ (ÚROVEŇ III)
+
+1) Pokročilá responzivita (srcset/sizes)
+Sekce: About me (Portrait image)
+Řádky: HTML 104–109
+
+2) Pokročilé formuláře (fieldset, autocomplete, required)
+Sekce: Contact (Form)
+Řádky: HTML 249–269
+
+3) CSS efekty a pohyb (transition, transform, animation)
+Sekce: Celý web (Buttons, Menu, Services, Portfolio)
+Řádky: CSS 40–44, 76–84, 165–171, 187–198, 200–205
+
+4) Respektování prefers-reduced-motion
+Sekce: Globální (vypnutí animací)
+Řádky: CSS 284–290
+
+5) Pokročilá responzivita (Fluid Grid & Breakpoints)
+Sekce: Services, Portfolio, Header
+Řádky: CSS 158–162, 176–180, 266–282
+
+6) SVG navíc (Inline SVG v UI)
+Sekce: Footer
+Řádky: HTML 276–278
+
+7) Klientský JavaScript (Taby a mobilní menu)
+Sekce: About me, Header
+Řádky: HTML 117–121, 92–93; JS 297–303, 305–308
